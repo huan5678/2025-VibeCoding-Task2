@@ -3,35 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>黃士桓 - 前端工程師作品集</title>
+  <meta name="description" content="黃士桓，來自台北的前端工程師，專注於 React、Vue、Next.js 與 Flutter 開發。分享學習紀錄、Side Project 實作心得與技術文章。" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; max-width: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 1920px; margin: 0 auto; padding: 16px; }
-    nav a { margin-right: 12px; text-decoration: none; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .col-12 { grid-column: span 12; }
-    @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    body {
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1623150502742-6a849aa94be4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      z-index: -1;
+    }
+    section#projects article {
+      backdrop-filter: blur(.5rem);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
   </style>
 </head>
-<body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
-      <a href="#about">關於我</a>
-      <a href="#projects">作品集</a>
-      <a href="https://example.com/blog">技術部落格</a>
-      <a href="mailto:me@example.com">聯絡我</a>
+<body class="overflow-x-hidden">
+  <header class="max-w-screen-2xl mx-auto px-4 py-8" role="banner">
+    <nav aria-label="主選單" class="flex flex-wrap gap-3 mb-6">
+      <a href="#about" class="no-underline hover:underline">關於我</a>
+      <a href="#projects" class="no-underline hover:underline">作品集</a>
+      <a href="https://github.com/huan5678?tab=repositories" class="no-underline hover:underline">作品庫</a>
+      <a href="mailto:huan5678@gmail.com" class="no-underline hover:underline">聯絡我</a>
     </nav>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">你好，我是黃士桓</h1>
+    <p class="text-lg leading-relaxed">來自台北的前端工程師。這裡整理了我的學習紀錄、Side Project 與技術實作心得。專注於 React、Vue、Next.js 與 Flutter 開發。</p>
   </header>
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
+  <main class="max-w-screen-2xl mx-auto px-4">
+    <section id="about" class="my-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">關於我</h2>
+      <div class="border border-gray-200 rounded-xl p-4 bg-white/50 backdrop-blur-sm shadow-sm">
+        <p class="mb-2"><strong>技術棧：</strong>JavaScript, React, Vue, Node.js, Next.js, Nuxt.js, Flutter, HTML5, CSS3, Sass, Tailwind CSS</p>
+        <p class="mb-2"><strong>工具：</strong>Git, Figma, Adobe Creative Suite (Photoshop, Illustrator, XD)</p>
+        <p class="mb-2"><strong>位置：</strong>Taipei, Taiwan 🇹🇼</p>
+        <p><strong>Email：</strong><a href="mailto:huan5678@gmail.com" class="hover:underline break-words">huan5678@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section id="projects" class="my-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">作品集</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <article class="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">NodeJS-Team-No9</h3>
+          <p class="mb-3 text-gray-700">團隊協作專案，使用 Node.js 建立的後端服務。</p>
+          <a href="https://github.com/huan5678/NodeJS-Team-No9" class="hover:underline break-words">查看專案 →</a>
+        </article>
+        <article class="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">meta-wall-backend</h3>
+          <p class="mb-3 text-gray-700">社群平台後端系統，實作 RESTful API 與資料庫設計。</p>
+          <a href="https://github.com/huan5678/meta-wall-backend" class="hover:underline break-words">查看專案 →</a>
+        </article>
+        <article class="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">Bootstrap 5 群眾募資平台</h3>
+          <p class="mb-3 text-gray-700">使用 Bootstrap 5 打造的響應式群眾募資網站。</p>
+          <a href="https://github.com/huan5678/bootstrap5-crowdfunding" class="hover:underline break-words">查看專案 →</a>
+        </article>
+        <article class="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">眼鏡電商網站</h3>
+          <p class="mb-3 text-gray-700">眼鏡購物網站，實作商品展示與購物車功能。</p>
+          <a href="https://github.com/huan5678/week3-glassesStore" class="hover:underline break-words">查看專案 →</a>
+        </article>
+        <article class="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">Dashboard 管理系統</h3>
+          <p class="mb-3 text-gray-700">後台管理介面，包含數據視覺化與表單處理。</p>
+          <a href="https://github.com/huan5678/week5_dashboard" class="hover:underline break-words">查看專案 →</a>
+        </article>
+        <article class="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">Gulp 自動化工具</h3>
+          <p class="mb-3 text-gray-700">使用 Gulp 建立前端自動化工作流程。</p>
+          <a href="https://github.com/huan5678/gulp-01" class="hover:underline break-words">查看專案 →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-screen-2xl mx-auto px-4 py-8" role="contentinfo">
+    <p class="mb-4">© 2025 黃士桓 · <a href="https://github.com/huan5678" class="hover:underline">GitHub</a></p>
   </footer>
 </body>
 </html>
